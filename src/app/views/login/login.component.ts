@@ -28,7 +28,7 @@ public loginForm: FormGroup;
    console.log("clicked on login button" + model.username);
 
    if(model.username === 'murugan' && model.password === 'murugan'){
-     this.router.navigate(['./home']);   
+     this.router.navigate(['./home']);
    }
 
 

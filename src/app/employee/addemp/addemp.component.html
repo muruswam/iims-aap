@@ -1,3 +1,124 @@
-<p>
-  addemp works!
-</p>
+<!--p>
+  addemployee works!
+</p -->
+
+  <form  [formGroup]="addEmp" (ngSubmit)="createEmp(addEmp.value)">
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">First Name</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" formControlName="firstName" type="text">  </div>
+    </div>
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Last Name</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="lastName">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Date Of Birth</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="dob">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Qualification 1</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="qualification_1">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Qualification 2</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="qualification_2">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Experiance Title</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="experianceTitle">  </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-xs-2" ><label  >Experiance Description</label></div>
+      <div class="col-xs-4" ><textarea rows="5" cols="70" class="form-control"  id="comment" formControlName="experianceDesciption"></textarea></div>
+    </div>
+
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Experiance Company 1</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="PrevCompany_1">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Experiance Company 2</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="prevCompany_2">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Reference</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text"  formControlName="referenceNo">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Reference Description</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="refrenceDescription">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Emergency Contact</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="emergencyContact">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-xs-2"> <label for="ex1">Maritial Status</label> </div>
+        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="maritialStatus">  </div>
+    </div>
+ 	<div class="panel panel-default">
+
+			<div class="panel-heading">Address Details</div>
+			<div class="panel-body">
+            <fieldset class="col-md-10">
+					<legend>Adddress</legend>
+                  <div class="form-group row">
+                      <div class="col-xs-2"> <label for="ex1">Street</label> </div>
+                      <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="street">  </div>
+                  </div>
+                  <div class="form-group row">
+                        <div class="col-xs-2"> <label for="ex1">City</label> </div>
+                        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="city">  </div>
+      			  </div>
+                  <div class="form-group row">
+                        <div class="col-xs-2"> <label for="ex1">Postal Code</label> </div>
+                        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="postCode">  </div>
+      			  </div>
+                  <div class="form-group row">
+                        <div class="col-xs-2"> <label for="ex1">State</label> </div>
+                        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="state">  </div>
+      			  </div>
+                  <div class="form-group row">
+                        <div class="col-xs-2"> <label for="ex1">Country</label> </div>
+                        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="country">  </div>
+      			  </div>
+                  </fieldset>
+				  <div class="clearfix"></div>
+            </div>
+      </div>
+
+ 	  <div class="panel panel-default">
+			<div class="panel-heading">Disabilty Details</div>
+			<div class="panel-body">
+            <fieldset class="col-md-10">
+					<legend></legend>
+                  <div class="form-group row">
+                      <div class="col-xs-2"> <label for="ex1">Disabled ?</label> </div>
+                      <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" formControlName="disabled">  </div>
+                  </div>
+                  <div class="form-group row">
+                        <div class="col-xs-2"> <label for="ex1">Disability Description</label> </div>
+                              <div class="col-xs-4"  ><textarea rows="5" cols="70" class="form-control" id="comment" formControlName="deisablityDescription"></textarea></div>
+      			      </div>
+                  </fieldset>
+				  <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-offset-9"><button type="button" class="btn btn-default" >Cancel</button></div>
+
+        <div class="col-md-offset-1"><button type="submit" class="btn btn-primary" >Save</button></div>
+      </div>
+  </form>
