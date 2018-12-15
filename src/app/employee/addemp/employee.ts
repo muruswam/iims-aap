@@ -17,6 +17,6 @@ export interface Employee {
 	postCode: number;
 	state: string;
 	country: string;
-  disabled: string;
-  deisablityDescription: string;
+  disability: any;
+  disablityDescription: string;
 }

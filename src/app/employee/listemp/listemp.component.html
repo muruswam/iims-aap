@@ -1,3 +1,7 @@
-<p>
-  listemp works!
-</p>
+<div class="container">
+<div class="row">
+<!-- div *ngIf="searchText" -->
+  <app-tableview  [searchText]="searchText"  (removeDetails)="removeEmpDetail($event)"></app-tableview>
+<!-- /div -->
+</div>
+</div>

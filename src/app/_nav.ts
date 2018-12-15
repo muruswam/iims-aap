@@ -29,12 +29,12 @@ export const navItems = [
       },
       {
         name: 'Update',
-        url: '/home/employee/editemp',
+        url: '/home/employee/edit',
         icon: 'icon-puzzle'
       },
       {
         name: 'Delete',
-        url: '/home/employee/list',
+        url: '/home/employee/delete',
         icon: 'icon-puzzle'
       },
       {

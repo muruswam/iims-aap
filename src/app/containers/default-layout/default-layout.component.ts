@@ -13,7 +13,6 @@ export class DefaultLayoutComponent {
   constructor() {
 
     this.changes = new MutationObserver((mutations) => {
-      debugger;
       this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
     });
 

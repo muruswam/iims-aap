@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
@@ -29,7 +30,7 @@ import {
   AppBreadcrumbModule,
   AppHeaderModule,
   AppFooterModule,
-  AppSidebarModule,
+  AppSidebarModule
 } from '@coreui/angular';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -47,9 +48,11 @@ import { VendorModule } from './vendor/vendor.module';
 import { HomeComponent } from './home/home.component';
 import { LogoutComponent } from './logout/logout.component';
 
+
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
