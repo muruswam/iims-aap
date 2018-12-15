@@ -1,0 +1,122 @@
+<!--p>
+  addemployee works!
+</p -->
+<div class="container" >
+  <form  #editFrm="ngForm" (ngSubmit)="editEmp(editFrm)">
+    <div class="form-group row">
+        <div class="col-12  bg-success">Edit Employee Details</div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Name</label> </div>
+        <div class="col-5"> <b>{{emp.firstName}}  {{emp.lastName}}</b></div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Qualification 2</label> </div>
+        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.qualification_2"  name="qualification_2">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Experiance Title</label> </div>
+        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.experianceTitle" name="experianceTitle">  </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-2" ><label  >Experiance Description</label></div>
+      <div class="col-4" ><textarea rows="5" cols="70" class="form-control"  id="comment" [(ngModel)]="emp.experianceDesciption"  name="experianceDesciption"></textarea></div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Experiance Company 2</label> </div>
+        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.prevCompany_2"  name="prevCompany_2">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Reference</label> </div>
+        <div class="col-5"> <input class="form-control" id="ex1" type="text"  [(ngModel)]="emp.referenceNo"  name="referenceNo">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Reference Description</label> </div>
+        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.refrenceDescription" name="refrenceDescription">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Emergency Contact</label> </div>
+        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.emergencyContact"  name="emergencyContact">  </div>
+    </div>
+
+    <div class="form-group row">
+      	<div class="col-2"> <label for="ex1">Maritial Status</label> </div>
+        <div class="col-5">
+          <div class="md-check form-check-inline">
+            <input type="radio" name="maritialStatus" [(ngModel)]="emp.maritialStatus" value="Unmarried" >
+            <label class="form-check-label radio-inline2" >Unmarried</label>
+          </div>
+          <div class="md-check form-check-inline">
+            <input type="radio" name="maritialStatus" [(ngModel)]="emp.maritialStatus" value="married">
+            <label class="form-check-label radio-inline2" >Married</label>
+          </div>
+        </div>
+    </div>
+ 	<div class="panel panel-default">
+
+			<div class="panel-heading">Address Details</div>
+			<div class="panel-body">
+            <fieldset class="col-md-10">
+					<legend>Adddress</legend>
+                  <div class="form-group row">
+                      <div class="col-2"> <label for="ex1">Street</label> </div>
+                      <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.street"  name="street">  </div>
+                  </div>
+                  <div class="form-group row">
+                        <div class="col-2"> <label for="ex1">City</label> </div>
+                        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.city"  name="city">  </div>
+      			  </div>
+                  <div class="form-group row">
+                        <div class="col-xs-2"> <label for="ex1">Postal Code</label> </div>
+                        <div class="col-xs-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.postCode" name="postCode">  </div>
+      			  </div>
+                  <div class="form-group row">
+                        <div class="col-2"> <label for="ex1">State</label> </div>
+                        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.state"  name="state">  </div>
+      			  </div>
+                  <div class="form-group row">
+                        <div class="col-2"> <label for="ex1">Country</label> </div>
+                        <div class="col-5"> <input class="form-control" id="ex1" type="text" [(ngModel)]="emp.country"  name="country">  </div>
+      			  </div>
+                  </fieldset>
+				  <div class="clearfix"></div>
+            </div>
+      </div>
+
+ 	  <div class="panel panel-default">
+			<div class="panel-heading">Disabilty Details</div>
+			<div class="panel-body">
+            <fieldset class="col-10">
+					<legend></legend>
+                  <div class="form-group row">
+                      <div class="col-2"> <label for="ex1">Disabled ?</label> </div>
+                      <div class="col-2">
+                        <select class='form-control select-option' name="disability"  [(ngModel)]='emp.disability' (ngModelChange)='onOptionsSelected($event)' required>
+                            <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                        <div class="col-2"> <label for="ex1">Disability Description</label> </div>
+                              <div class="col-4"  ><textarea rows="5" cols="70" class="form-control" id="disablityDescription"  name= "disablityDescription" [(ngModel)]="emp.disablityDescription"></textarea></div>
+      			      </div>
+                  </fieldset>
+				  <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-offset-9"><button type="button" class="btn btn-default" >Cancel</button></div>
+
+        <div class="col-offset-1"><button type="submit" class="btn btn-primary" >Save</button></div>
+      </div>
+  </form>
+</div>

@@ -1,0 +1,87 @@
+
+<div *ngIf="isAvailable">
+<div class="container" >
+<div class="row bg-error">
+  <div class="col-1 bg-success">
+    <input type="checkbox" name="selectall" #selectall  [value]="all" (change)="selAll()">
+  </div>
+  <div class="col-2 bg-success">
+    <label>Qualification</label>
+  </div>
+  <div class="col-2 bg-success">
+    <label>Designation</label>
+  </div>
+  <div class="col-2 bg-success">
+    <label>Prev. Company</label>
+  </div>
+  <div class="col-2 bg-success">
+    <label>Contact No</label>
+  </div>
+  <div class="col-2 bg-success">
+    <label>City</label>
+  </div>
+</div>
+<div *ngFor="let employee of emp">
+  <div class="row">
+  <div class="col-xs-1">
+    <input type="checkbox" name="empname" #empname  [id]="employee.firstName" [value]="employee.firstName" (change)="chbxSel(empname, employee.firstName)" >
+  </div>
+  <div class="col-xs-2">
+    <label>
+        <a href=""  (click)="navigate(employee.qualification_2)">
+          {{employee.qualification_2}}
+        </a>
+    </label>
+  </div>
+  <div class="col-xs-2">
+    <a popover="He is working as a - {{employee.experianceTitle}} in HCL Technologies" [popoverCloseOnClickOutside]="true" popoverPlacement="right">
+      <label>{{employee.experianceTitle}}</label>
+    </a >
+  </div>
+  <div class="col-xs-2">
+    <label>{{employee.prevCompany_2}}</label>
+  </div>
+  <div class="col-xs-2">
+    <label>{{employee.emergencyContact}}</label>
+  </div>
+  <div class="col-xs-2">
+    <label>{{employee.city}}</label>
+  </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-1">
+    <input type= "button" class="btn-primary" value="Remove" (click)="removeEntry()"/>
+  </div>
+  <div class="col">
+      <input type= "button" class="btn-default" value="clear"  (click)="clearSelected()"/>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- div>
+  <popover-content #myPopover title="this header can be omitted" placement="right" [closeOnClickOutside]="true">
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>. Click outside of this popover and it will be dismissed automatically.
+
+    <u (click)="myPopover.hide()">Or click here to close it</u>.
+  </popover-content>
+
+  <button [popover]="myPopover">click this button to see a popover</button>
+</div>
+
+<br/ -->
+
+
+<!--ag-grid-angular
+    style="width:1000px; height:200px;"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    class="ag-theme-balham"
+    [rowData]="rows"
+    [columnDefs]="columns"
+     rowSelection="multiple" >
+</ag-grid-angular -->
